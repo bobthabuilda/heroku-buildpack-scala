@@ -26,6 +26,9 @@ export_env_dir $ENV_DIR
 
 #create the cache dir if it doesn't exist
 mkdir -p $CACHE_DIR
+gem install -i $CACHE_DIR/.gems --no-rdoc compass
+export PATH=$PATH:$CACHE_DIR/.gems/bin
+export GEM_PATH=$GEM_PATH:$CACHE_DIR/.gems
 
 # create default system.properties 
 if [ ! -f ${BUILD_DIR}/system.properties ]; then
