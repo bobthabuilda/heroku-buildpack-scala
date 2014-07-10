@@ -81,13 +81,13 @@ SBT_URL="http://typesafe.artifactoryonline.com/typesafe/ivy-releases/org.scala-s
 ## in 0.10 start-script will depend on package, if packaging
 ## is required - it may not be, we can run .class files or a package-war
 ## instead.
-SBT_TASKS="compile stage"
+SBT_TASKS="clean compile stage"
 
 # To enable clean compiles, configure the environment to clean:
 # $ heroku config:set SBT_CLEAN=true
 # $ git push heroku master
 # See: https://devcenter.heroku.com/articles/scala-support#clean-builds
-[ "$SBT_CLEAN" = "true" ] && SBT_TASKS="clean $SBT_TASKS"
+# [ "$SBT_CLEAN" = "true" ] && SBT_TASKS="clean $SBT_TASKS"
 
 if [ ! -d .ivy2/cache ]; then
    mkdir -p .ivy2/cache
