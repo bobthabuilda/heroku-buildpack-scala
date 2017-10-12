@@ -29,7 +29,7 @@ mkdir -p $CACHE_DIR
 
 # install compass
 #gem install -i $CACHE_DIR/.gems --no-rdoc compass
-gem install -i $CACHE_DIR/.gems --no-rdoc sass
+gem install -i $CACHE_DIR/.gems --no-rdoc sass -v 3.4.25
 export PATH=$PATH:$CACHE_DIR/.gems/bin
 export GEM_PATH=$GEM_PATH:$CACHE_DIR/.gems
 
